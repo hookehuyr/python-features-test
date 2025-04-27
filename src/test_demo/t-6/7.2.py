@@ -7,4 +7,12 @@ Description: 文件描述
 """
 
 xs = {"a": 4, "c": 2, "b": 3, "d": 1}
-print(sorted(xs.items()))
+
+for item in xs.items():
+    print(item)
+
+print(sorted(xs.items(), key=lambda x: x[1]))
+
+import operator
+
+print(sorted(xs.items(), key=operator.itemgetter(1)))
